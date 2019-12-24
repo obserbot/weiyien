@@ -1,4 +1,9 @@
 
+.hero-head {
+  background-color: #3298dc;
+  border-bottom: 1px solid grey;
+}
+
 
 
 figure img.avatar {
@@ -12,11 +17,6 @@ figure img.avatar {
 /* todo: remove extra */
 
 
-
-.hero-head {
-  background-color: #3298dc;
-  border-bottom: 1px solid grey;
-}
 
 .second-title {
   font-size: 20px;
