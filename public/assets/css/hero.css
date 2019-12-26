@@ -72,3 +72,16 @@ footer li:before {
   margin-left: -1.5em;
   color: #147efb;
 }
+
+
+
+/* Henry's */
+
+a {
+  color: #faebd7;
+}
+
+.empty-para {
+  min-height: 10px;
+}
+

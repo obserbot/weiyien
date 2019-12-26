@@ -3,12 +3,15 @@
   border-bottom: 1px solid grey;
 }
 
-.navbar-brand.level {
-  margin-bottom: 0;
+.title-outside {
+  margin-bottom: 50px;
 }
-.navbar-brand.level .level-right {
-  margin-top: 0;
+
+.tutors-wrap figure img {
+  border-radius: 50%;
 }
+
+/** from c1.css, todo: remove extra */
 
 .second-title {
   font-size: 20px;
