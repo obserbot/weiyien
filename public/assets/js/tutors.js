@@ -46,13 +46,26 @@ fetch(apiurl)
     return res.json()
   })
   .then(res_json => {
-    //console.log('json res:', res_json)
+    console.log('json res:', res_json)
     const wrap = document.getElementById('wytutors')
     let name = ''
     let html = ''
     for (let ix in res_json.tutors) {
       name = res_json.tutors[ix].user_name
-      html += '<a href="/tutor/' + name + '.html" class="column is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd is-half-mobile"><figure class="image container is-64x64"><img src="/tutor-avatar/' + name + '.jpeg" alt="' + name + '"> </figure>' + name + '</a>'
+      nationality = res_json.tutors[ix].nationality
+      html +=
+        '<div class="column is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen ' +
+                    'is-one-quarter-fullhd is-half-mobile profile-wrap">' + 
+          '<div class="profile-pane">' +
+          '<a href="/tutor/' + name + '.html">' +
+            '<figure class="image container is-64x64">' +
+              '<img src="/tutor-avatar/' + name + '.jpeg" alt="' + name + '">' +
+            '</figure>' +
+            '<div class="name">' + name + '</div>' +
+            '<span class="nationality">' + nationality.en + '</span>' +
+          '</a>' +
+          '</div>' +
+        '</div>'
     }
 
     wrap.innerHTML = html

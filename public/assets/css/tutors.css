@@ -3,19 +3,50 @@
   border-bottom: 1px solid grey;
 }
 
+.hero-body {
+  min-height: 300px;
+}
+
 .title-outside {
   margin-bottom: 50px;
 }
 
-.tutors-wrap figure img {
-  border-radius: 50%;
+.profile-wrap {
+  padding: 10px;
 }
 
+.profile-wrap .profile-pane {
+  background: #fffaf0;
+  border-radius: 8px;
+  padding: 20px 0;
+}
+
+.profile-wrap a .nationality {
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+  color: #a9a9a9;
+  font-size: 0.9em;
+  padding: 2px 5px;
+}
+
+.profile-wrap .name {
+  color: #000;
+  font-size: 1.1em;
+  margin: 18px auto 10px;
+}
+
+.profile-wrap figure img {
+  border-radius: 50%;
+}
+/*
+*/
+
 .loader-wrap-0 {
-  width: 100%;
   opacity: 0;
-  z-index: -1;
+  position: absolute;
   transition: opacity 1s;
+  width: 100%;
+  z-index: -1;
 }
 .loader-wrap-0.active {
   opacity: 1;
@@ -41,9 +72,6 @@
   padding-bottom: 30px;
 }
 
-.hero-body p {
-  margin: 18px 0;
-}
 
 
 
