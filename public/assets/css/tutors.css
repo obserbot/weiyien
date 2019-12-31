@@ -38,8 +38,6 @@
 .profile-wrap figure img {
   border-radius: 50%;
 }
-/*
-*/
 
 .loader-wrap-0 {
   opacity: 0;
@@ -60,17 +58,6 @@
 }
 
 
-
-/** from c1.css, todo: remove extra */
-
-.second-title {
-  font-size: 20px;
-  margin: 20px auto 35px;
-}
-
-.last-section {
-  padding-bottom: 30px;
-}
 
 
 

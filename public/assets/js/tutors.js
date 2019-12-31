@@ -57,13 +57,13 @@ fetch(apiurl)
         '<div class="column is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen ' +
                     'is-one-quarter-fullhd is-half-mobile profile-wrap">' + 
           '<div class="profile-pane">' +
-          '<a href="/tutor/' + name + '.html">' +
-            '<figure class="image container is-64x64">' +
-              '<img src="/tutor-avatar/' + name + '.jpeg" alt="' + name + '">' +
-            '</figure>' +
-            '<div class="name">' + name + '</div>' +
-            '<span class="nationality">' + nationality.en + '</span>' +
-          '</a>' +
+            '<a href="/tutor/' + name + '.html">' +
+              '<figure class="image container is-64x64">' +
+                '<img src="/tutor-avatar/' + name + '.jpeg" alt="' + name + '">' +
+              '</figure>' +
+              '<div class="name">' + name + '</div>' +
+              '<span class="nationality">' + nationality.en + '</span>' +
+            '</a>' +
           '</div>' +
         '</div>'
     }
