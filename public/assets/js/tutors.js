@@ -43,11 +43,20 @@ addClass(theSpinner, 'active')
 
 fetch(apiurl)
   .then(res => {
-    removeClass(theSpinner, 'active')
     return res.json()
   })
   .then(res_json => {
-    console.log('json res:', res_json)
+    //console.log('json res:', res_json)
+    const wrap = document.getElementById('wytutors')
+    let name = ''
+    let html = ''
+    for (let ix in res_json.tutors) {
+      name = res_json.tutors[ix].user_name
+      html += '<a href="/tutor/' + name + '.html" class="column is-one-quarter-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-quarter-fullhd is-half-mobile"><figure class="image container is-64x64"><img src="/tutor-avatar/' + name + '.jpeg" alt="' + name + '"> </figure>' + name + '</a>'
+    }
+
+    wrap.innerHTML = html
+    removeClass(theSpinner, 'active')
   })
 
 
