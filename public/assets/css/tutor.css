@@ -4,12 +4,23 @@
   border-bottom: 1px solid grey;
 }
 
-
+.nationality {
+  margin-bottom: 30px;
+}
+.nationality .nationality-text {
+  border: 1px solid #4f4f4f;
+  border-radius: 5px;
+  color: #4f4f4f;
+  padding: 2px 5px;
+}
 
 figure img.avatar {
   border-radius: 50%;
 }
 
+.hero-body .container h2.subtitle {
+  color: #f0e68c !important;
+}
 
 
 
