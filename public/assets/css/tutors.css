@@ -11,6 +11,10 @@
   margin-bottom: 50px;
 }
 
+#select-wrap {
+  margin: 0 0 30px 0;
+}
+
 .profile-wrap {
   padding: 10px;
 }
