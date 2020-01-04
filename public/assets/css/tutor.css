@@ -18,6 +18,10 @@
   margin: 46px auto 40px;
 }
 
+.hero-body .intro-zh {
+  margin-bottom: 50px;
+}
+
 figure img.avatar {
   border-radius: 50%;
 }
