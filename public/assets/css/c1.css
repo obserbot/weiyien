@@ -36,4 +36,30 @@ h1.title {
   padding-top: 0;
 }
 
+.statistic {
+  margin-bottom: 50px !important;
+}
+
+.wy-category {
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  padding: 30px 12px;
+}
+
+.wy-category .icon-wrap {
+  margin-right: 20px;
+}
+
+.wy-category .icon-wrap img {
+  width: 40px;
+  height: 40px;
+}
+
+.wy-category .cate-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 
