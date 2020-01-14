@@ -14,9 +14,16 @@
   margin-top: 0;
 }
 
+  /*
 .second-title {
   font-size: 20px;
-  margin: 20px auto 35px;
+  margin: 50px auto ;
+  padding: 0 0 30px;
+}
+  */
+
+.container .image.container {
+  margin: 40px 0 30px;
 }
 
 .last-section {
