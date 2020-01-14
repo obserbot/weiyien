@@ -14,6 +14,10 @@
   margin-top: 0;
 }
 
+.hero .hero-body {
+  padding-top: 10px;
+}
+
   /*
 .second-title {
   font-size: 20px;
@@ -50,8 +54,6 @@ h1.title {
 .wy-category {
   background: #fff;
   border-radius: 10px;
-  color: #000;
-  font-size: 16px;
   padding: 30px 12px;
 }
 
@@ -65,8 +67,19 @@ h1.title {
 }
 
 .wy-category .cate-name {
+  color: #000;
   font-size: 20px;
   font-weight: 500;
+}
+
+.wy-category .number-wrap .number-daren {
+  color: #000;
+  font-size: 18px;
+}
+
+.wy-category .number-wrap .label-daren {
+  color: grey;
+  font-size: 16px;
 }
 
 
