@@ -6,34 +6,19 @@ const apiurl = "https://weiyien.com/api/weiyien/v1/tutors?secret=kjh29dfg"
 
 const create_tag_filter = () => {
 
-  const args = getUrlArguments()
+  const args = WY_getUrlArguments()
   const arg_tag = args.hasOwnProperty('tag') ? parseInt(args.tag, 10): 0
-
-  const Categories = {
-    1: {
-      zh: '少儿英语',
-      en: 'Children English'
-    },
-    2: {
-      zh: '成人英语',
-      en: 'Adult English'
-    },
-    3: {
-      zh: '雅思辅导',
-      en: 'IELTS'
-    },
-  }
 
   let options =
         '<div class="select" onchange="filtering(2)">' +
           '<select id="select-tag">' +
             '<option value="0">类别</option>'
-  for (let iy in Categories) {
+  for (let iy in WY_Categories) {
     if (iy == arg_tag) {
-      options += '<option value="' + iy + '" selected>' + Categories[iy].zh + '</option>'
+      options += '<option value="' + iy + '" selected>' + WY_Categories[iy].zh + '</option>'
     }
     else {
-      options += '<option value="' + iy + '">' + Categories[iy].zh + '</option>'
+      options += '<option value="' + iy + '">' + WY_Categories[iy].zh + '</option>'
     }
   }
   options +=
@@ -62,41 +47,11 @@ xhr.send(JSON.stringify(data))
 */
 
 
-// Handle classes.
-const hasClass = (ele, cls) => {
-  return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-}
-const addClass = (ele, cls) => {
-  if (!hasClass(ele,cls)) ele.className += " "+cls;
-}
-const removeClass = (ele, cls) => {
-  if (hasClass(ele,cls)) {
-    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-    ele.className=ele.className.replace(reg,' ');
-  }
-}
-
 const loaderSpinner = document.getElementsByClassName('loader-wrap-0')
 const theSpinner = loaderSpinner[0]
 
-addClass(theSpinner, 'active')
+WY_addClass(theSpinner, 'active')
 
-
-const getUrlArguments = () => {
-  // url: &nationality=us&tag=23
-  const url = location.search
-  // query: nationality=us&tag=23
-  const query = url.substr(1)
-  const result = {}
-  query.split("&").forEach(part => {
-    const item = part.split("=")
-    result[item[0]] = decodeURIComponent(item[1])
-  })
-
-  return result
-}
-//const args = getUrlArguments()
-//console.log(args)
 
 let allTutors = {}
 
@@ -107,7 +62,7 @@ fetch(apiurl)
   .then(res_json => {
     allTutors = res_json.tutors
 
-    const args = getUrlArguments()
+    const args = WY_getUrlArguments()
     const arg_nationality = args.hasOwnProperty('nationality') ? args.nationality.toUpperCase() : 'all'
     const arg_tag         = args.hasOwnProperty('tag') ? args.tag: '0'
 
@@ -171,7 +126,7 @@ fetch(apiurl)
     console.log('nations:', nations)
 
     //wrap.innerHTML = html
-    removeClass(theSpinner, 'active')
+    WY_removeClass(theSpinner, 'active')
   })
 
 
@@ -181,7 +136,7 @@ const filtering = filter => {
   const tutor_wrap = document.getElementById('wytutors')
   tutor_wrap.innerHTML = ''
 
-  const args = getUrlArguments()
+  const args = WY_getUrlArguments()
   let arg_nationality = args.hasOwnProperty('nationality') ? args.nationality.toUpperCase() : 'ALL'
   let arg_tag         = args.hasOwnProperty('tag') ? args.tag: '0'
 
@@ -238,7 +193,7 @@ const filtering = filter => {
 
 const filter_tutors = tutors => {
 
-  const args = getUrlArguments()
+  const args = WY_getUrlArguments()
   const arg_nationality = args.hasOwnProperty('nationality') ? args.nationality.toUpperCase() : 'ALL'
   const arg_tag         = args.hasOwnProperty('tag') ? args.tag: '0'
 
