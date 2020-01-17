@@ -16,6 +16,16 @@ function toggleNav() {
   if (className == "navbar-menu") {
   */
 
+  if (WY_hasClass(mobile_menu, 'is-hidden')) {
+    WY_removeClass(mobile_menu, 'is-hidden')
+    WY_addClass(burger, 'is-active')
+  }
+  else {
+    WY_addClass(mobile_menu, 'is-hidden')
+    WY_removeClass(burger, 'is-active')
+  }
+
+  /*
   className = mobile_menu.getAttribute('class')
   if (className == 'navbar-menu is-active level-right is-hidden') {
     //nav.className = "navbar-menu is-active"
@@ -29,4 +39,5 @@ function toggleNav() {
     burger.className = 'navbar-burger burger'
     console.log('not active')
   }
+  */
 }
