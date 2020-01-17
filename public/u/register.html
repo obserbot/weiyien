@@ -73,7 +73,7 @@
 
       <div class="h1-wrap level">
         <h1 class="title has-text-centered level-item">
-          注册
+          注册新用户
         </h1>
       </div>
 
@@ -81,11 +81,35 @@
         <div class="container">
           <div class="field">
             <div class="control">
-              <input class="input is-primary" type="text" placeholder="Email">
+              <input id="field_email" class="input is-primary" type="email" placeholder="邮箱地址">
+            </div>
+          </div>
+          <!--
+          <div class="field">
+            <div class="control">
+              <input id="val_firstname" class="input is-primary" type="text" placeholder="Frist name">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input id="val_lastname" class="input is-primary" type="text" placeholder="Last name">
+            </div>
+          </div>
+          -->
+          <div class="field">
+            <div class="control">
+              <input id="field_password" class="input is-primary" type="password" placeholder="输入密码">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <input id="field_confirmed" class="input is-primary" type="password" placeholder="再次输入密码">
             </div>
           </div>
 
-
+          <div class="has-text-centered">
+            <button id="wy_register" class="button is-primary is-rounded">注 册</button>
+          </div>
 
 
         </div>
@@ -93,7 +117,9 @@
     </section>
 
 
+    <script src="/assets/js/wylib.js"></script>
     <script src="/assets/js/weiyi.js"></script>
+    <script src="/assets/js/register.js"></script>
 
     <div class="box cta">
       <p class="has-text-centered">
