@@ -1,4 +1,6 @@
 // login.js
+//
+// 已经废弃，直接表单验证，Passport.js
 
 (() => {
 
@@ -24,6 +26,20 @@
 
 
   /**
+   * Login successfully.
+   * Save token.
+   */
+  function success_process (resjson)
+  {
+
+    console.log ('in prc')
+    localStorage.setItem('wyetoken', resjson.token)
+
+    document.location = '/'
+  }
+
+
+  /**
    * Login with credentials.
    * Return token if success.
    */
@@ -32,6 +48,7 @@
     const info = validate_form()
     if (!info) {
       console.log('Error in validation')
+      alert ('邮箱地址或密码错误')
       return
     }
 
@@ -43,11 +60,12 @@
       if (xhr.readyState !== 4) return
       if (xhr.status >= 200 && xhr.status < 300) {
         const resjson = JSON.parse(xhr.responseText)
-        if (resjson.hasOwnProperty('message') && resjson.message === 'ok') {
+        if (resjson.hasOwnProperty('message') && resjson.message === 'ok' && resjson.token.length > 10) {
           success_process(resjson)
         }
         else {
-          console.log('Response error:', resjson)
+          //console.log('Response error:', resjson)
+          alert ('邮箱地址或密码错误')
         }
       }
     }
@@ -57,6 +75,13 @@
     xhr.send(JSON.stringify(info))
   }
 
+
+  // Check localStorage
+  //const wyetoken = localStorage.getItem('wyetoken')
+  //console.log('wye token:', wyetoken)
+
+  // Clear token
+  localStorage.setItem('wyetoken', '')
 
   document.getElementById('wy_login').addEventListener('click', do_login)
 
