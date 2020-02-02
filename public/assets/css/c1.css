@@ -43,8 +43,29 @@
 }
 
 h1.title {
+  min-height: 200px;
+}
+
+h1.title {
   background: url('/assets/images/bigbanner.jpg') center center; background-size: cover;
-  height: 200px;
+}
+
+@media mobile and (max-width: 768px) {
+  h1.title {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  h1.title {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  h1.title {
+    height: 700px;
+  }
 }
 
 .container h2.subtitle {

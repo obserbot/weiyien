@@ -2,6 +2,7 @@
 //
 // Weiyi Library
 //
+// 学习 lodash.js, 直接引用其代码。
 
 
 // Handle classes.
