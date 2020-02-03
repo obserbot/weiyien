@@ -1,0 +1,91 @@
+
+.hero-head {
+  background-color: #3298dc;
+  border-bottom: 1px solid grey;
+}
+
+.nationality .nationality-text {
+  border: 1px solid #888888;
+  border-radius: 5px;
+  color: #888888;
+  padding: 2px 5px;
+}
+
+.basic-info.level {
+  background-color: #edeff0;
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero.is-info .basic-info h1 {
+  color: #666;
+}
+
+.basic-info.level .level-right {
+  color: #888888;
+}
+
+@media (max-width: 768px) {
+  .basic-info.level {
+    height: 150px;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .basic-info.level {
+    margin: 20px auto 0;
+    border-radius: 10px;
+    height: 200px;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .basic-info.level {
+    margin: 20px auto 0;
+    border-radius: 10px;
+    padding: 0 30px;
+    height: 250px;
+  }
+}
+
+.hero-body figure {
+  margin: 46px auto 40px;
+}
+
+.hero-body .intro-zh {
+  margin-bottom: 50px;
+}
+
+figure img.avatar {
+  border-radius: 50%;
+}
+
+.hero-body .container h2.subtitle {
+  color: #f0e68c !important;
+}
+
+
+
+/* from c1.css */
+/* todo: remove extra */
+
+
+
+.second-title {
+  font-size: 20px;
+  margin: 20px auto 35px;
+}
+
+.last-section {
+  padding-bottom: 30px;
+}
+
+.hero-body p {
+  margin: 18px 0;
+}
+
+
+
